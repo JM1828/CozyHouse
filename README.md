@@ -32,39 +32,60 @@ MySQL: 데이터 저장을 위한 관계형 데이터베이스
 이 프로젝트를 실행하기 위해서는 몇 가지 환경 설정이 필요합니다. 아래의 단계를 따라주세요.
 
 ## 1. 데이터베이스 설정
+
 MySQL에서 cozy-house 데이터베이스를 생성합니다.
 아래의 정보를 바탕으로 application.properties 파일을 설정합니다.
+
 ## 2. application.properties 설정
+
 src/main/resources/application.properties 파일을 다음과 같이 생성 후 설정합니다:
 
 - 애플리케이션 이름 및 포트
+  
 spring.application.name=backend
+
 server.port=8081
 
 - 파일 업로드 디렉토리
+  
 file.upload-dir=C:\파일경로\file\
+
 spring.servlet.multipart.enabled=true
+
 spring.servlet.multipart.max-file-size=50MB
+
 spring.servlet.multipart.max-request-size=50MB
 
 - MySQL 설정
+  
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
 spring.datasource.url=YOUR_URL_HERE
+
 spring.datasource.username=YOUR_username_HERE
+
 spring.datasource.password=YOUR_PASSWORD_HERE
 
 - JPA 설정
+  
 spring.jpa.properties.hibernate.show_sql=true
+
 spring.jpa.properties.hibernate.format_sql=true
+
 spring.jpa.hibernate.ddl-auto=update
+
 spring.jpa.database-platform=org.hibernate.dialect.MySQL8Dialect
+
 spring.jackson.property-naming-strategy=SNAKE_CASE
+
 spring.jwt.secret=YOUR_SECRET_KEY_HERE
 
 - 보안 로깅
+  
 logging.level.org.springframework.security=DEBUG
 
 - kakao OAuth2
+
 spring.security.oauth2.client.registration.kakao.client-name=Kakao
 spring.security.oauth2.client.registration.kakao.client-id=YOUR_CLIENT_ID
 spring.security.oauth2.client.registration.kakao.client-secret=YOUR_CLIENT_SECRET
@@ -78,6 +99,7 @@ spring.security.oauth2.client.provider.kakao.user-info-uri=https://kapi.kakao.co
 spring.security.oauth2.client.provider.kakao.user-name-attribute=id
 
 - Google OAuth2
+  
 spring.security.oauth2.client.registration.google.client-name=google
 spring.security.oauth2.client.registration.google.client-id=YOUR_CLIENT_ID
 spring.security.oauth2.client.registration.google.client-secret=YOUR_CLIENT_SECRET
@@ -86,6 +108,7 @@ spring.security.oauth2.client.registration.google.authorization-grant-type=autho
 spring.security.oauth2.client.registration.google.scope=profile,email
 
 - GitHub OAuth2
+  
 spring.security.oauth2.client.registration.github.client-name=GitHub
 spring.security.oauth2.client.registration.github.client-id=YOUR_CLIENT_ID
 spring.security.oauth2.client.registration.github.client-secret=YOUR_CLIENT_SECRET
@@ -99,6 +122,7 @@ spring.security.oauth2.client.provider.github.user-info-uri=https://api.github.c
 spring.security.oauth2.client.provider.github.user-name-attribute=id
 
 - Naver OAuth2
+  
 spring.security.oauth2.client.registration.naver.client-name=naver
 spring.security.oauth2.client.registration.naver.client-id=YOUR_CLIENT_ID
 spring.security.oauth2.client.registration.naver.client-secret=YOUR_CLIENT_SECRET
@@ -111,11 +135,13 @@ spring.security.oauth2.client.provider.naver.user-info-uri=https://openapi.naver
 spring.security.oauth2.client.provider.naver.user-name-attribute=response
 
 - CoolSMS 설정(회원가입 인증코드 비활성화했습니다.)
+  
 coolsms.api.key=YOUR_COOLSMS_API_KEY
 coolsms.api.secret=YOUR_COOLSMS_API_SECRET
 coolsms.from=YOUR_COOLSMS_FROM_NUMBER
 
 - Redis 설정
+  
 spring.data.redis.host=localhost
 spring.data.redis.port=6379
 
