@@ -181,7 +181,9 @@ spring.security.oauth2.client.provider.naver.user-name-attribute=response
 - CoolSMS 설정(회원가입 인증코드 비활성화했습니다.)
   
 coolsms.api.key=YOUR_COOLSMS_API_KEY
+
 coolsms.api.secret=YOUR_COOLSMS_API_SECRET
+
 coolsms.from=YOUR_COOLSMS_FROM_NUMBER
 
 - Redis 설정
