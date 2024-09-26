@@ -97,51 +97,85 @@ logging.level.org.springframework.security=DEBUG
 - kakao OAuth2
 
 spring.security.oauth2.client.registration.kakao.client-name=Kakao
+
 spring.security.oauth2.client.registration.kakao.client-id=YOUR_CLIENT_ID
+
 spring.security.oauth2.client.registration.kakao.client-secret=YOUR_CLIENT_SECRET
+
 spring.security.oauth2.client.registration.kakao.redirect-uri=http://localhost:8081/login/oauth2/code/kakao
+
 spring.security.oauth2.client.registration.kakao.authorization-grant-type=authorization_code
+
 spring.security.oauth2.client.registration.kakao.scope=account_email, profile_nickname
+
 spring.security.oauth2.client.registration.kakao.client-authentication-method=client_secret_post
+
 spring.security.oauth2.client.provider.kakao.authorization-uri=https://kauth.kakao.com/oauth/authorize
+
 spring.security.oauth2.client.provider.kakao.token-uri=https://kauth.kakao.com/oauth/token
+
 spring.security.oauth2.client.provider.kakao.user-info-uri=https://kapi.kakao.com/v2/user/me
+
 spring.security.oauth2.client.provider.kakao.user-name-attribute=id
 
 - Google OAuth2
   
 spring.security.oauth2.client.registration.google.client-name=google
+
 spring.security.oauth2.client.registration.google.client-id=YOUR_CLIENT_ID
+
 spring.security.oauth2.client.registration.google.client-secret=YOUR_CLIENT_SECRET
+
 spring.security.oauth2.client.registration.google.redirect-uri=http://localhost:8081/login/oauth2/code/google
+
 spring.security.oauth2.client.registration.google.authorization-grant-type=authorization_code
+
 spring.security.oauth2.client.registration.google.scope=profile,email
 
 - GitHub OAuth2
   
 spring.security.oauth2.client.registration.github.client-name=GitHub
+
 spring.security.oauth2.client.registration.github.client-id=YOUR_CLIENT_ID
+
 spring.security.oauth2.client.registration.github.client-secret=YOUR_CLIENT_SECRET
+
 spring.security.oauth2.client.registration.github.redirect-uri=http://localhost:8081/login/oauth2/code/github
+
 spring.security.oauth2.client.registration.github.authorization-grant-type=authorization_code
+
 spring.security.oauth2.client.registration.github.scope=SCOPE_read:user,SCOPE_user:email
+
 spring.security.oauth2.client.registration.github.client-authentication-method=client_secret_post
+
 spring.security.oauth2.client.provider.github.authorization-uri=https://github.com/login/oauth/authorize
+
 spring.security.oauth2.client.provider.github.token-uri=https://github.com/login/oauth/access_token
+
 spring.security.oauth2.client.provider.github.user-info-uri=https://api.github.com/user
+
 spring.security.oauth2.client.provider.github.user-name-attribute=id
 
 - Naver OAuth2
   
 spring.security.oauth2.client.registration.naver.client-name=naver
+
 spring.security.oauth2.client.registration.naver.client-id=YOUR_CLIENT_ID
+
 spring.security.oauth2.client.registration.naver.client-secret=YOUR_CLIENT_SECRET
+
 spring.security.oauth2.client.registration.naver.redirect-uri=http://localhost:8081/login/oauth2/code/naver
+
 spring.security.oauth2.client.registration.naver.authorization-grant-type=authorization_code
+
 spring.security.oauth2.client.registration.naver.scope=name,email
+
 spring.security.oauth2.client.provider.naver.authorization-uri=https://nid.naver.com/oauth2.0/authorize
+
 spring.security.oauth2.client.provider.naver.token-uri=https://nid.naver.com/oauth2.0/token
+
 spring.security.oauth2.client.provider.naver.user-info-uri=https://openapi.naver.com/v1/nid/me
+
 spring.security.oauth2.client.provider.naver.user-name-attribute=response
 
 - CoolSMS 설정(회원가입 인증코드 비활성화했습니다.)
